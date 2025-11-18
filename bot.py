@@ -1,6 +1,9 @@
+import os
 import telebot
 
-TOKEN = "8599806981:AAG4TmmFxt6MnFInydTC41FCP1g76ACHYF0"
+# Récupération du token depuis les variables d'environnement Render
+TOKEN = os.getenv("TOKEN")
+
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
